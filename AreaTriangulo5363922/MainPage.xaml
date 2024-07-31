@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:AreaTriangulo5363922.ViewModels"
+             x:Class="AreaTriangulo5363922.MainPage"
+             BackgroundColor="Black"    >
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModels/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+             <Label
+     Text="Area del Triangulo"
+     FontAttributes="Bold"
+     FontFamily="Cambria"
+     FontSize="25"
+     TextColor="Gainsboro"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+ <Label
+     Text="Digite el primer lado"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+ <Entry
+   Text="{Binding L1}"
+   WidthRequest="150"
+   Placeholder="Ingrese primer lado"
+   PlaceholderColor="LightGray"/>
+
+ <Label
+     Text="Digite el segundo lado"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+ <Entry
+    Text="{Binding L2}"
+    WidthRequest="150"
+  Placeholder="Ingrese número"
+  PlaceholderColor="LightGray"/>
+
+            <Label
+     Text="Digite el tercer lado"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+    Text="{Binding L3}"
+    WidthRequest="150"
+  Placeholder="Ingrese número"
+  PlaceholderColor="LightGray"/>
+
+            <Label
+     Text="El resultado es: "
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+ <Entry
+     Text="{Binding Resultado}"
+      WidthRequest="300"/>
+
+ <Button
+     BackgroundColor="BlueViolet"
+     TextColor="White"
+     Text="Calcular Area"
+     x:Name="Suma"
+      WidthRequest="200"
+     Command="{Binding AreaCommand}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
